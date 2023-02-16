@@ -1,0 +1,547 @@
+.container {
+    display: flex;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    background: var(--branca);
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--laranja);
+}
+
+.marcador {
+    font-size: 1.3rem;
+}
+
+.logo__titulo{
+    font-size: 1.5rem;
+}
+
+.lupa {
+    font-size: 1.3rem;
+    color: var(--cinza);
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .logo{
+        gap: 0px;
+    }
+
+    .fas{
+        margin-right: .2rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .header{
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}
+
+
+
+/* ============================== Seção viajar*/
+
+.viajar{
+    display: flex;
+    background-image: url('../imagens/london.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 72px);
+}
+
+.container__nav{
+    max-width: 1200px;
+    background: var(--branca);
+    flex-direction: column;
+    width: 65vw;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu__lista-item{
+    padding: 0 8rem;
+    background: var(--preto);
+    color: var(--branca);
+    width: 100vw;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.7rem 0;
+}
+
+.menu__lista-item--ativo{
+    background: var(--laranja);
+}
+
+.fas{
+    margin-right: 1.5rem;
+}
+
+.fa-plane{
+    transform: rotate(-45deg);
+}
+
+.container__formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 2.2rem 1rem;
+    gap: 1.2rem;
+}
+
+.formulario__titulo{
+    font-size: 24px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container__fieldset{
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+.formulario__item{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 4px;
+}
+
+.input{
+    padding: .4rem .3rem;
+    border: 1px solid var(--cinza-claro);
+}
+
+.input::placeholder{
+    color: var(--cinza-claro);
+    font-family: var(--fonte);
+}
+
+
+.btn__form{
+    width: 20%;
+    padding: 0.5rem;
+    border: none;
+    background: var(--cinza-escuro);
+    color: var(--branca);
+    font-family: var(--fonte);
+}
+
+@media screen and (max-width: 768px) {
+    .viajar{
+        height: auto;
+        padding: 3.7rem;
+    }
+    
+    .container__nav{
+        width: 73vw;
+    }
+
+    .btn__form{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .container__nav{
+        width: 100vw; 
+    }
+
+    .viajar{
+        padding: 0;
+    }
+
+    .container__fieldset{
+        flex-direction: column;
+        gap: .3rem;
+    }
+
+    .formulario__item{
+        width: 100%;
+    }
+
+    .input{
+        padding: .8rem .3rem;
+    }
+
+    .input::placeholder{
+        font-size: 16px;
+    }
+
+    .btn__form{
+        width: 40%;
+        padding: .7rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320PX) {
+    .menu{
+        font-size: 15px;
+    }
+
+    .menu__lista-item{
+        padding: 0.7rem .1rem;
+    }
+
+    .fa-plane, .fa-bed, .fa-car{
+        font-size: 12px;
+    }
+
+    .fas{
+        margin-right: .7rem;
+    }
+
+    .btn__form{
+        width: 65%;
+        font-size: 15px;
+    }
+}
+
+/* ======================================= Seção Ofertas*/
+
+.container__main{
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.titulo__principal{
+    font-size: 24px;
+}
+
+.destinos, .natureza, .newsletter, .contato{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 78vw;
+    height: 45vh;
+    gap: .7rem;
+}
+
+.subtitulo{
+    display: flex;
+    align-items: flex-end;
+    color: var(--branca);
+    padding: 0 0 .5rem 1rem;
+}
+
+.destinos__destaque{
+    background: url('/imagens/cinqueterre.jpg') center / cover no-repeat;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    
+}
+
+.destinos__item:nth-child(2){
+    background: url('/imagens/newyork.jpg') center / cover no-repeat;
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+
+.destinos__item:nth-child(3){
+    background: url('/imagens/sanfran.jpg') center / cover no-repeat;
+    grid-column: 4/4;
+    grid-row: 1/1;
+}
+
+.destinos__item:nth-child(4){
+    background: url('/imagens/pisa.jpg') center / cover no-repeat;
+    grid-column: 3/3;
+    grid-row: 2/2;
+}
+
+.destinos__item:nth-child(5){
+    background: url('/imagens/paris.jpg') center / cover no-repeat;
+    grid-column: 4/4;
+    grid-row: 2/2;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: block;
+        padding: 0 1rem; 
+    }
+
+   
+
+    .destinos, .natureza, .newsletter, .contato{
+        width: 100%;   
+
+    }
+  
+
+}
+
+@media screen and (max-width: 450px) {
+    .destinos{
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+
+    .destinos__destaque, .destinos__item{
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .destinos {
+        height: 125vh;
+    }
+    
+    .container__main > article:nth-child(0) {
+        margin-top: 4rem;
+    }
+
+}
+
+/* =============================================== Seção Cards Natureza*/
+
+.natureza{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.natureza__cards {
+    display: flex;
+    gap: .7rem;
+}
+
+.natureza__card___1-imagem, .natureza__card___2-imagem{
+    width: 100%;
+}
+
+.natureza__card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: .8rem .8rem;
+    background: var(--branca);
+}
+
+.natureza__card-titulo{
+    font-size: 24px;
+}
+
+.natureza__card-preco, .natureza__descricao{
+    font-size: 12px;
+}
+
+.natureza__card-preco{
+    color: var(--cinza-claro);
+}
+
+.btn__ticket{
+    border: none;
+    background: none;
+    font-family: var(--fonte);
+    text-align: start;
+    margin-left: .5rem;
+}
+
+
+@media screen and (max-width: 450px) {
+    .natureza__cards {
+        flex-direction: column;
+        
+    }
+
+}
+
+/*========================================= Seção Cards Newsletter*/
+
+.newsletter{
+    background: var(--cinza-escuro);
+    box-shadow: 1px 1px 1px 1px var(--cinza-escuro);
+}
+
+.newsletter, .news__container{
+    display: flex;
+    flex-direction: column;
+    height: auto;  
+}
+
+.news__container{
+    padding: 2rem 1rem .7rem 1rem;
+    gap: 1rem;
+    color: var(--branca);
+}
+
+.news__titulo{
+    font-size: 24px;
+}
+
+.news__subtitulo{
+    font-size: 12px;
+    padding-top: .3rem;
+    padding-bottom: .2rem;
+}
+
+.input__email{
+    font-size: 12px;
+}
+
+.formulario__email{
+    width: 100%;
+}
+
+.btn__subscribe{
+    background: var(--vermelho-btn);
+    width:8%;
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn__subscribe {
+        width: 15%;
+    }
+  
+
+}
+
+@media screen and (max-width: 450px) {
+    .natureza__cards {
+        flex-direction: column;
+        
+    }
+
+    .btn__subscribe {
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .btn__subscribe {
+        width: 40%;
+    }
+}
+
+
+/*===================================================Seção Cards Contato*/
+
+.contato{
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo__contato, .infos__contato___item{
+    font-size: 12px;
+}
+
+.subtitulo__contato{
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+}
+
+.infos__contato{
+    display: flex;
+    font-size: .8rem;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.marker{
+    margin-right: 1.4rem;
+    font-size: .6rem;
+}
+
+
+.marcador--contact{
+    margin-right: 1.2rem;
+    font-size: .6rem;
+}
+
+.contato__form{
+    flex-direction: column;
+    margin-top: .5rem;
+    gap: .5rem;
+}
+
+.input__contato{
+    padding: 1rem .4rem;
+}
+
+.btn__contato{
+    text-transform: uppercase;
+    width: 12%;
+    font-size: 12px;
+    padding: .6rem;
+    margin-top: .8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .btn__contato {
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .btn__contato {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .btn__contato {
+        width: 45%;
+        padding: .8rem;
+    }
+}
+
+
+/*=================================================Seção Cards Footer*/
+
+.titulo__footer{
+    color: var(--cinza-claro);
+    font-size: 14px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1.3rem;
+}
+
+.author{
+    font-size: 12px;
+    color: var(--cinza-claro);
+}

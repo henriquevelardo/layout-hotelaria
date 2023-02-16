@@ -1,0 +1,18 @@
+:root{
+    --fonte:'Raleway', Poppins;
+    --laranja: #f44336;
+    --cinza: #8e918f;
+    --cinza-claro: #b1b1b1;
+    --branca: #ffffff;
+    --preto: #000000;
+    --cinza-escuro: #464746;
+    --fundo-main: #f1f1f1;
+    --vermelho-btn: #db7070;
+}
+
+body{
+    font-family: var(--fonte);
+    background: var(--fundo-main)
+}
+
+
